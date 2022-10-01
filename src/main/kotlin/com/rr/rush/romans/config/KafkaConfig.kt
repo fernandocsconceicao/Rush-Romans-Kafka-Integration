@@ -9,14 +9,7 @@ import org.springframework.kafka.core.ProducerFactory
 
 @Configuration
 class KafkaConfig {
-    @Bean
-    fun kafkaPropertiesConfig(): Map<String, Any> {
-        val props = HashMap<String, Any>()
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092")
-        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer().javaClass)
-        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer().javaClass)
-        return props
-    }
+
     @Bean
     fun kafkaTemplate(producerFactory: ProducerFactory<String, String>): KafkaTemplate<String, String> {
         return KafkaTemplate(producerFactory)
