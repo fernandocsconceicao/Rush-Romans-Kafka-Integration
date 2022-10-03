@@ -1,8 +1,7 @@
 package com.rr.rush.romans.service
 
-import com.ti89.dto.front.request.MetricsDto
+import com.rr.rush.romans.entity.metrics.ardor.MetricsDto
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.http.codec.json.Jackson2JsonEncoder
 import org.springframework.kafka.core.KafkaTemplate
 import org.springframework.stereotype.Service
 

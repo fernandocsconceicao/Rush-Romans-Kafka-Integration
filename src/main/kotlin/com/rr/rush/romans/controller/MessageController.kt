@@ -1,14 +1,14 @@
 package com.rr.rush.romans.controller
 
 import com.rr.rush.romans.service.MetricsService
-import com.ti89.dto.front.request.MetricsDto
+import com.rr.rush.romans.entity.metrics.ardor.MetricsDto
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class TestController {
+class MetricsController {
     @Autowired
     lateinit var service: MetricsService
 
